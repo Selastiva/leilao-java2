@@ -1,42 +1,20 @@
 package br.com.senac.leiloes.service;
 
-import br.com.senac.leiloes.model.Lance;
-import br.com.senac.leiloes.model.Produto;
-import br.com.senac.leiloes.model.Usuario;
-import br.com.senac.leiloes.repository.ProdutoRepository;
-import java.math.BigDecimal;
+import br.com.senac.leiloes.dto.*;
+import br.com.senac.leiloes.model.*;
+import br.com.senac.leiloes.repository.*;
 import java.util.List;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+@Service
 public class LeilaoService {
-    private final ProdutoRepository produtoRepository;
-
-    public LeilaoService(ProdutoRepository produtoRepository) {
-        if (produtoRepository == null) throw new IllegalArgumentException("O repositório é obrigatório.");
-        this.produtoRepository = produtoRepository;
-    }
-
-    public void cadastrarProduto(Produto produto) {
-        if (produtoRepository.buscarPorId(produto.getId()).isPresent())
-            throw new IllegalArgumentException("Já existe produto com esse ID.");
-        produtoRepository.salvar(produto);
-    }
-
-    public List<Produto> listarProdutos() {
-        return produtoRepository.listarTodos();
-    }
-
-    public Lance ofertarLance(int produtoId, Usuario usuario, BigDecimal valor) {
-        Produto produto = produtoRepository.buscarPorId(produtoId)
-                .orElseThrow(() -> new IllegalArgumentException("Produto não encontrado."));
-        produto.registrarLance(valor);
-        return new Lance(usuario, produto, valor);
-    }
-
-    public void venderProduto(int produtoId) {
-        Produto produto = produtoRepository.buscarPorId(produtoId)
-                .orElseThrow(() -> new IllegalArgumentException("Produto não encontrado."));
-        if (produto.getMaiorLance().signum() <= 0)
-            throw new IllegalStateException("Não é possível vender sem ao menos um lance válido.");
-        produto.marcarComoVendido();
-    }
+ private final ProdutoRepository produtos; private final LanceRepository lances;
+ public LeilaoService(ProdutoRepository produtos,LanceRepository lances){this.produtos=produtos;this.lances=lances;}
+ public List<Produto> listar(){return produtos.findAll();}
+ public Produto buscar(Long id){return produtos.findById(id).orElseThrow(()->new IllegalArgumentException("Produto não encontrado."));}
+ public Produto cadastrar(ProdutoRequest r){return produtos.save(new Produto(r.nome(),r.categoria(),r.descricao(),r.valorInicial()));}
+ @Transactional public Lance ofertar(Long id,LanceRequest r){Produto p=buscar(id);p.registrarLance(r.valor());return lances.save(new Lance(p,r.nome(),r.valor()));}
+ @Transactional public Produto vender(Long id){Produto p=buscar(id);p.marcarComoVendido();return produtos.save(p);}
+ public List<Lance> listarLances(Long id){buscar(id);return lances.findByProdutoIdOrderByDataHoraDesc(id);}
 }

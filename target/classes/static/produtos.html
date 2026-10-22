@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consulte e filtre os produtos da Casa de Leilões.">
+  <title>Produtos | Casa de Leilões</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/app.js" defer></script><script src="assets/js/produtos.js" defer></script>
+</head>
+<body data-page="produtos">
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="index.html"><span class="brand-mark">CL</span><span><strong>Casa de Leilões</strong><small>PAINEL DE CONTROLE</small></span></a>
+    <div class="menu-label">MENU PRINCIPAL</div>
+    <nav class="menu" aria-label="Navegação principal"><a class="nav-link" data-nav="home" href="index.html"><span class="nav-icon">▦</span> Visão geral</a><a class="nav-link" data-nav="produtos" href="produtos.html"><span class="nav-icon">◇</span> Produtos</a><a class="nav-link" data-nav="cadastro" href="cadastro.html"><span class="nav-icon">＋</span> Cadastrar produto</a></nav>
+    <div class="sidebar-bottom"><div class="status-dot"></div><div><strong>Ambiente demonstrativo</strong><small>Conectado ao banco de dados</small></div></div>
+  </aside>
+  <main class="main-content">
+    <header class="topbar"><div><p class="eyebrow">CATÁLOGO / CONSULTA</p><h1>Produtos</h1></div><button class="avatar" id="themeToggle" type="button" aria-label="Alternar tema" title="Alternar tema">◐</button></header>
+    <div class="content-wrap">
+      <div class="page-intro-row"><div><h2>Catálogo de produtos</h2><p class="section-description">Pesquise itens, acompanhe os lances e consulte o status de cada leilão.</p></div><a class="button button-primary" href="cadastro.html">＋ Novo produto</a></div>
+      <section class="filter-panel" aria-label="Filtros de produtos"><label class="search-box"><span>⌕</span><input type="search" id="searchInput" placeholder="Buscar por nome ou descrição..." aria-label="Buscar produtos"></label><label class="select-wrap"><span class="sr-only">Filtrar por categoria</span><select id="categoryFilter"><option value="">Todas as categorias</option><option>Informática</option><option>Eletrônicos</option><option>Casa</option><option>Esporte</option><option>Colecionáveis</option><option>Outros</option></select></label><label class="select-wrap"><span class="sr-only">Filtrar por status</span><select id="statusFilter"><option value="">Todos os status</option><option value="Ativo">Ativo</option><option value="Vendido">Vendido</option></select></label></section>
+      <div class="results-meta"><span id="resultsCount">0 produtos encontrados</span><span class="results-note">Os filtros são aplicados automaticamente.</span></div>
+      <div class="product-grid" id="allProducts"></div>
+      <div class="empty-state hidden" id="productsEmpty"><span class="empty-icon">⌕</span><h3>Nenhum resultado encontrado</h3><p>Tente alterar os filtros ou cadastrar um novo produto.</p><button class="button button-secondary" id="clearFilters" type="button">Limpar filtros</button></div>
+      <footer class="page-footer">Casa de Leilões · Projeto Integrador · Sistema Web integrado</footer>
+    </div>
+  </main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

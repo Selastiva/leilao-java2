@@ -1,7 +1,9 @@
-C:\Users\sean0\Downloads\UC15 B\Etapa7_PI_CasaDeLeiloes_REFEITO\CasaDeLeiloes_Etapa7\src\main\java\br\com\senac\leiloes\app\Main.java
-C:\Users\sean0\Downloads\UC15 B\Etapa7_PI_CasaDeLeiloes_REFEITO\CasaDeLeiloes_Etapa7\src\main\java\br\com\senac\leiloes\model\Lance.java
-C:\Users\sean0\Downloads\UC15 B\Etapa7_PI_CasaDeLeiloes_REFEITO\CasaDeLeiloes_Etapa7\src\main\java\br\com\senac\leiloes\model\Produto.java
-C:\Users\sean0\Downloads\UC15 B\Etapa7_PI_CasaDeLeiloes_REFEITO\CasaDeLeiloes_Etapa7\src\main\java\br\com\senac\leiloes\model\Usuario.java
-C:\Users\sean0\Downloads\UC15 B\Etapa7_PI_CasaDeLeiloes_REFEITO\CasaDeLeiloes_Etapa7\src\main\java\br\com\senac\leiloes\repository\memory\ProdutoRepositoryMemoria.java
-C:\Users\sean0\Downloads\UC15 B\Etapa7_PI_CasaDeLeiloes_REFEITO\CasaDeLeiloes_Etapa7\src\main\java\br\com\senac\leiloes\repository\ProdutoRepository.java
-C:\Users\sean0\Downloads\UC15 B\Etapa7_PI_CasaDeLeiloes_REFEITO\CasaDeLeiloes_Etapa7\src\main\java\br\com\senac\leiloes\service\LeilaoService.java
+C:\Users\sean0\Downloads\UC15 B\CasaDeLeiloes_Etapa9\CasaDeLeiloes_Etapa9\src\main\java\br\com\senac\leiloes\CasaDeLeiloesApplication.java
+C:\Users\sean0\Downloads\UC15 B\CasaDeLeiloes_Etapa9\CasaDeLeiloes_Etapa9\src\main\java\br\com\senac\leiloes\controller\ProdutoController.java
+C:\Users\sean0\Downloads\UC15 B\CasaDeLeiloes_Etapa9\CasaDeLeiloes_Etapa9\src\main\java\br\com\senac\leiloes\dto\LanceRequest.java
+C:\Users\sean0\Downloads\UC15 B\CasaDeLeiloes_Etapa9\CasaDeLeiloes_Etapa9\src\main\java\br\com\senac\leiloes\dto\ProdutoRequest.java
+C:\Users\sean0\Downloads\UC15 B\CasaDeLeiloes_Etapa9\CasaDeLeiloes_Etapa9\src\main\java\br\com\senac\leiloes\model\Lance.java
+C:\Users\sean0\Downloads\UC15 B\CasaDeLeiloes_Etapa9\CasaDeLeiloes_Etapa9\src\main\java\br\com\senac\leiloes\model\Produto.java
+C:\Users\sean0\Downloads\UC15 B\CasaDeLeiloes_Etapa9\CasaDeLeiloes_Etapa9\src\main\java\br\com\senac\leiloes\repository\LanceRepository.java
+C:\Users\sean0\Downloads\UC15 B\CasaDeLeiloes_Etapa9\CasaDeLeiloes_Etapa9\src\main\java\br\com\senac\leiloes\repository\ProdutoRepository.java
+C:\Users\sean0\Downloads\UC15 B\CasaDeLeiloes_Etapa9\CasaDeLeiloes_Etapa9\src\main\java\br\com\senac\leiloes\service\LeilaoService.java

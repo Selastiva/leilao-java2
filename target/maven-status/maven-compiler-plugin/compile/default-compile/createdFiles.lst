@@ -1,7 +1,10 @@
-br\com\senac\leiloes\repository\ProdutoRepository.class
 br\com\senac\leiloes\service\LeilaoService.class
-br\com\senac\leiloes\app\Main.class
-br\com\senac\leiloes\repository\memory\ProdutoRepositoryMemoria.class
+br\com\senac\leiloes\CasaDeLeiloesApplication.class
 br\com\senac\leiloes\model\Produto.class
+br\com\senac\leiloes\dto\LanceRequest.class
+br\com\senac\leiloes\controller\ProdutoController.class
+br\com\senac\leiloes\repository\LanceRepository.class
+br\com\senac\leiloes\dto\ProdutoRequest.class
+br\com\senac\leiloes\repository\ProdutoRepository.class
 br\com\senac\leiloes\model\Lance.class
-br\com\senac\leiloes\model\Usuario.class
+.netbeans_automatic_build
